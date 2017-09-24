@@ -9,7 +9,7 @@ class NarutoSay(actions.Action):
     def __init__(self, message) -> None:
         self.message = message if message else 'Dattebayo'
 
-    def run(self, context):
+    def run(self, context) -> str:
         print(self.message)
         LOG.info('Naruto says: "%s"'.format(self.message))
 
