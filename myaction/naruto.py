@@ -15,7 +15,7 @@ class NarutoSay(actions.Action):
 
     def run(self, context):
         print(self.message)
-        LOG.info('Naruto says: "%s"'.format(self.message))
+        LOG.info('Naruto says: "{0}"'.format(self.message))
 
         return self.message
 
