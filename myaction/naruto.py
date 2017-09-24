@@ -5,11 +5,15 @@ LOG = logging.getLogger(__name__)
 
 
 class NarutoSay(actions.Action):
+    """This action repeat the famous phrase of Naruto Uzumaki
 
-    def __init__(self, message) -> None:
-        self.message = message if message else 'Dattebayo'
+        :param message: (optional, 'Dattebayo' by default) a phrase for
+        Naruto
+        """
+    def __init__(self, message='Dattebayo'):
+        self.message = message
 
-    def run(self, context) -> str:
+    def run(self, context):
         print(self.message)
         LOG.info('Naruto says: "%s"'.format(self.message))
 
